@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_register"
+            app:startDestination="@id/register_fragment"
+            tools:layout="RegisterFragment"
+  >
+  <fragment android:id="@+id/register_fragment"
+            android:name="com.probeh.navigation.register.RegisterFragment"
+            android:label="RegisterFragment"
+            tools:layout="RegisterFragment"
+    >
+    <action android:id="@+id/action_register_fragment_to_register_pairing"
+            app:destination="@id/register_pairing"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+      />
+  </fragment>
+  <fragment android:id="@+id/register_pairing"
+            android:name="com.probeh.navigation.register.RegisterPairing"
+            android:label="RegisterPairing"
+            tools:layout="RegisterFragment"
+    >
+    <action android:id="@+id/action_register_pairing_to_register_attach"
+            app:destination="@id/register_attach"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+      />
+  </fragment>
+  <fragment android:id="@+id/register_attach"
+            android:name="com.probeh.navigation.register.RegisterAttach"
+            android:label="RegisterAttach"
+            tools:layout="RegisterFragment"
+    >
+    <action android:id="@+id/action_register_attach_to_register_complete"
+            app:destination="@id/register_complete"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+      />
+  </fragment>
+  <fragment android:id="@+id/register_complete"
+            android:name="com.probeh.navigation.register.RegisterComplete"
+            android:label="RegisterComplete"
+            tools:layout="RegisterFragment"
+    />
+</navigation>

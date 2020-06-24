@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  >
+  <data></data>
+  <RelativeLayout
+    android:id="@+id/barcode_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".barcode.BarcodeActivity"
+    >
+    <TextView
+      android:id="@+id/barcode_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:text="Barcode Activity"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      android:textStyle="bold"
+      />
+    <Button
+      android:id="@+id/barcode_action"
+      android:layout_width="180dp"
+      android:layout_height="60dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:onClick="onSubmit"
+      android:text="Continue"
+      android:textAllCaps="false"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      />
+  </RelativeLayout>
+</layout>

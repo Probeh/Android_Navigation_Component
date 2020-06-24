@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  >
+  <data></data>
+  <RelativeLayout
+    android:id="@+id/register_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".register.RegisterActivity"
+    >
+    <TextView
+      android:id="@+id/register_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:text="Register Activity"
+      android:textAppearance="@style/TextAppearance.AppCompat.Large"
+      android:textStyle="bold"
+      />
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@id/register_action"
+      android:layout_below="@id/register_title"
+      android:layout_centerInParent="true"
+      >
+      <fragment
+        android:id="@+id/register_content"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_register"
+        tools:layout="@layout/fragment_register"
+        />
+    </ScrollView>
+    <Button
+      android:id="@+id/register_action"
+      android:layout_width="180dp"
+      android:layout_height="60dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:onClick="onSubmit"
+      android:text="Continue"
+      android:textAllCaps="false"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      />
+  </RelativeLayout>
+</layout>
